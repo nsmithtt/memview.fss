@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Memview</title>
+    <link rel="icon" type="image/png" href="/static/img/logo.png" />
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="/fss/fss.js"></script>
+    <script src="chart.js"></script>
+    <script>
+fss.query(data => {
+  document.getElementById("downloading").remove();
+  chart(data);
+})
+    </script>
+</head>
+<body>
+<div id="downloading" style="position: absolute; top: 50%; left: 50%; margin: -50px 0 0 -50px; font-family: sans-serif;">
+Downloading report...
+</div>
+</body>
+</html>
