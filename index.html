@@ -10,7 +10,7 @@
     <script>
 fss.query(data => {
   document.getElementById("downloading").remove();
-  fss.download(data.list.root, data => {
+  fetch_json(data.list.root).then(data => {
     chart(data);
   });
 })
