@@ -5,9 +5,10 @@
     <title>Memview</title>
     <link rel="icon" type="image/png" href="/static/img/logo.png" />
     <script src="https://d3js.org/d3.v5.min.js"></script>
-    <script src="/fss/fss.js"></script>
     <script src="chart.js"></script>
-    <script>
+    <script type="module">
+import fss from "/fss/fss.js";
+
 fss.query(data => {
   document.getElementById("downloading").remove();
   fss.download(data.list.root, data => {
